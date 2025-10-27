@@ -1,6 +1,6 @@
 from smolagents import ToolCallingAgent
 import model_utils
-from travel_agent.tools.web_tools import CityAttractionSearchTool, ScrapePageTool
+from campus_agent.tools.web_tools import CityAttractionSearchTool, ScrapePageTool
 
 def build_agent(verbose: int = 1) -> ToolCallingAgent:
     model = model_utils.google_build_reasoning_model()
