@@ -35,10 +35,11 @@ class EventSearchTool(Tool):
         query = query.lower()
         results = []
         for event in self.events:
-            # Check if the query is in the title, description, or category
+            # Check if the query is in the title, description, category, or date
             if (query in event.get('title', '').lower() or
                 query in event.get('description', '').lower() or
-                query in event.get('category', '').lower()):
+                query in event.get('category', '').lower() or
+                query in event.get('date', '').lower()): # <-- ADD THIS LINE
                 results.append(event)
 
         if not results:
