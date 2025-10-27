@@ -5,7 +5,7 @@ from agent import build_agent
 
 def main():
     if len(sys.argv) < 2:
-        print("Usage: python run.py \"<your question about a city to visit.>\"")
+        print("Usage: python run.py \"<your question about Utah Tech University.>\"")
         return
     query = sys.argv[1]
     agent = build_agent(verbose=2)
