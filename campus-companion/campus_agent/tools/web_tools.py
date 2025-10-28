@@ -37,7 +37,7 @@ class EventSearchTool(Tool):
             if (query in event.get('title', '').lower() or
                 query in event.get('description', '').lower() or
                 query in event.get('category', '').lower() or
-                query in event.get('date', '').lower()): # <-- ADD THIS LINE
+                query in event.get('date', '').lower()): 
                 results.append(event)
 
         if not results:
