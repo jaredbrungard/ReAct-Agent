@@ -5,7 +5,6 @@ import csv
 import os
 
 
-# Add this class to campus-companion/campus_agent/tools/web_tools.py
 class EventSearchTool(Tool):
     name = "event_search"
     description = "Searches the Utah Tech University events.csv file for upcoming events. Use this for any questions about campus events, workshops, or schedules."
@@ -16,7 +15,6 @@ class EventSearchTool(Tool):
 
     def __init__(self):
         super().__init__()
-        # Build the path to events.csv, which is one level up from the 'campus-companion' dir
         base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
         self.csv_path = os.path.join(base_dir, 'events.csv')
         self.events = []
